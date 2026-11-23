@@ -439,6 +439,7 @@
 
     /* ------------------------------------
        HERO
+       UPDATED LEFT SPACING
     ------------------------------------ */
 
     .hero {
@@ -501,9 +502,11 @@
       width: 100%;
     }
 
+    /* UPDATED: Extra 65px left margin for hero content */
     .hero-copy {
       position: relative;
-      max-width: 750px;
+      max-width: min(750px, calc(100% - 65px));
+      margin-left: 65px;
     }
 
     .hero .eyebrow {
@@ -1638,6 +1641,12 @@
       .header-cta {
         padding-inline: 14px;
       }
+
+      /* Slightly reduce extra margin on smaller desktops */
+      .hero-copy {
+        margin-left: 45px;
+        max-width: min(750px, calc(100% - 45px));
+      }
     }
 
     @media(max-width: 1024px) {
@@ -1810,10 +1819,11 @@
         padding-bottom: 105px;
       }
 
+      /* UPDATED: Reset desktop margin and center on mobile */
       .hero-copy {
         max-width: 540px;
         text-align: center;
-        margin: auto;
+        margin: 0 auto;
       }
 
       .hero .eyebrow {
